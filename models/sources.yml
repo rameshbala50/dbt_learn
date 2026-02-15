@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: dbt_lean
+    database: prod_db
+    schema: silver_sales
+    tables:
+      - name: customer  # enabled
+      - name: customer_orders  # enabled
+  - name: dbt_raw
+    database: prod_db
+    schema: bronze_raw
+    tables:
+      - name: customer
