@@ -7,8 +7,9 @@ sources:
     tables:
       - name: customer  # enabled
       - name: customer_orders  # enabled
-  - name: dbt_raw
+  - name: bronze
     database: prod_db
     schema: bronze_raw
     tables:
       - name: customer
+      - name: customer_orders
