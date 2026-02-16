@@ -1,0 +1,9 @@
+with sales_state as (
+
+select state, count(order_id), sum(order_total)
+from {{ ref('customer_sales') }}
+group by state
+)
+
+select *
+from sales_state
